@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import PageTemplate from '../components/templateMovieListPage';
 
-const PopularMoviesPage = (props) => {
+const NowPlayingMoviesPage = (props) => {
 
     const { data, error, isLoading, isError } = useQuery('now_playing', getNowPlaying)
 
@@ -26,4 +26,4 @@ const PopularMoviesPage = (props) => {
         />
     );
 };
-export default PopularMoviesPage;
+export default NowPlayingMoviesPage;
