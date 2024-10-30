@@ -23,6 +23,9 @@ Name: Troy Barrett
 
 [ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
 
++ See movies ordered by popularity - /movie/popular
++ Get a list of movies that are currently in theatres - /movie/now_playing
+
 e.g.
 + Discover list of movies - discover/movie
 + Movie details - movie/:id
