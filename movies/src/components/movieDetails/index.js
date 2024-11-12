@@ -9,6 +9,7 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
+import MovieCredits from "../movieCredits";
 
 
 const root = {
@@ -22,7 +23,8 @@ const root = {
 const chip = { margin: 0.5 };
 
 const MovieDetails = ({ movie }) => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [reviewsDrawerOpen, setReviewsDrawerOpen] = useState(false);
+  const [creditsDrawerOpen, setCreditsDrawerOpen] = useState(false);
 
   return (
     <>
@@ -75,7 +77,7 @@ const MovieDetails = ({ movie }) => {
       <Fab
         color="secondary"
         variant="extended"
-        onClick={() => setDrawerOpen(true)}
+        onClick={() => setReviewsDrawerOpen(true)}
         sx={{
           position: 'fixed',
           bottom: '1em',
@@ -85,8 +87,24 @@ const MovieDetails = ({ movie }) => {
         <NavigationIcon />
         Reviews
       </Fab>
-      <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+      <Drawer anchor="top" open={reviewsDrawerOpen} onClose={() => setReviewsDrawerOpen(false)}>
         <MovieReviews movie={movie} />
+      </Drawer>
+      <Fab
+        color="secondary"
+        variant="extended"
+        onClick={() => setCreditsDrawerOpen(true)}
+        sx={{
+          position: 'fixed',
+          bottom: '1em',
+          right: '11em'
+        }}
+      >
+        <NavigationIcon />
+        Credits
+      </Fab>
+      <Drawer anchor="top" open={creditsDrawerOpen} onClose={() => setCreditsDrawerOpen(false)}>
+        <MovieCredits movie={movie} />
       </Drawer>
       </>
   );
