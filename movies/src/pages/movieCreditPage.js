@@ -1,17 +1,17 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import PageTemplate from "../components/templateMoviePage";
-import MovieCredits from "../components/movieCredits";
+import MovieCredit from "../components/movieCredit";
 
-const MovieCreditsPage = (props) => {
+const MovieCreditPage = (props) => {
     let location = useLocation();
-    const { movie, credits } = location.state;
+    const { movie, credit } = location.state;
 
     return (
         <PageTemplate movie={movie}>
-            <MovieCredits credits={credits} />
+            <MovieCredit credit={credit} />
         </PageTemplate>
     );
 };
 
-export default MovieCreditsPage;
+export default MovieCreditPage;
