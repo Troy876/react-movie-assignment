@@ -12,7 +12,7 @@ import { excerpt } from "../../util";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
-export default function MovieReviews({ movie }) {
+export default function MovieCredits({ movie }) {
     const { data, error, isLoading, isError } = useQuery(
         ["credits", { id: movie.id }],
         getMovieCredits
@@ -53,7 +53,7 @@ export default function MovieReviews({ movie }) {
                                         movie: movie,
                                     }}
                                 >
-                                    Full Review
+                                    Full Credit
                                 </Link>
                             </TableCell>
                         </TableRow>
