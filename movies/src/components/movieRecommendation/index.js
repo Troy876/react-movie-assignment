@@ -5,11 +5,19 @@ const MovieRecommendation = ({ recommendation }) => {
     return (
         <>
             <Typography variant="h5" component="h3">
-                Recommended Movie:
+                Recommended Movie: {recommendation.title}
             </Typography>
 
             <Typography variant="h6" component="p">
-                Summary:
+                Summary: {recommendation.overview}
+            </Typography>
+
+            <Typography variant="h6" component="p">
+                Rating: {recommendation.vote_average}
+            </Typography>
+
+            <Typography variant="h6" component="p">
+                Release date: {recommendation.release_date}
             </Typography>
         </>
     );

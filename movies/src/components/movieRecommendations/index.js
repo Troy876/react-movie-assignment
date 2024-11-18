@@ -49,7 +49,7 @@ export default function MovieRecommendations({ movie }) {
                                 <Link
                                     to={`/recommendations/${r.id}`}
                                     state={{
-                                        recommendations: r,
+                                        recommendation: r,
                                         movie: movie,
                                     }}
                                 >
