@@ -5,11 +5,15 @@ const MovieCredit = ({ credit }) => {
     return (
         <>
             <Typography variant="h5" component="h3">
-                Name:
+                Name: {credit.name}
             </Typography>
 
             <Typography variant="h6" component="p">
-                Character:
+                Character: {credit.character}
+            </Typography>
+
+            <Typography variant="h6" component="p">
+                Popularity: {credit.popularity}
             </Typography>
         </>
     );

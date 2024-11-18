@@ -49,7 +49,7 @@ export default function MovieCredits({ movie }) {
                                 <Link
                                     to={`/credits/${r.id}`}
                                     state={{
-                                        credits: r,
+                                        credit: r,
                                         movie: movie,
                                     }}
                                 >
