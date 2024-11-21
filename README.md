@@ -4,46 +4,28 @@ Name: Troy Barrett
 
 ## Overview.
 
-[A brief statement on the content of this repository.]
+Using the TMDB Developer API, this web app pulls in different movies based on different categories specified at the API Endpoints. Each movie has a "More Details" button that redirects the user to a page with more information regarding the movie. On this page, users can view "Reviews" of the movie, "Recommendations" based on the current movie, and "Credits" for actors who play in the movie. These parametered endpoints can be viewed in full in a separate page. Caching is performed on all endpoints and parametered endpoints. On the "Home" page, movies can be added to the "Favourites" page. On the "Upcoming" page, movies can be added to the "Playlist" page.
 
 ### Features.
-[ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
  
-+ Feature 1
-+ Feature 2
-+ Feature 3
-+ etc
-+ etc
-
-## Setup requirements.
-
-[ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
++ Popular API Endpoint
++ Now Playing API Endpoint
++ Recommendations Parameterised Endpoint
++ Credits Parameterised Endpoint
++ Caching on Static Endpoints
++ Caching on Parameterised Endpoints
++ Playlist Functionality
 
 ## API endpoints.
 
-[ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
-
-+ See movies ordered by popularity - /movie/popular
-+ Get a list of movies that are currently in theatres - /movie/now_playing
-
-e.g.
-+ Discover list of movies - discover/movie
-+ Movie details - movie/:id
-+ Movie genres = /genre/movie/list
++ See movies ordered by popularity - /movies/popular
++ Get a list of movies that are currently in theatres - /movies/now_playing
++ See playlist movies added by the user - /movie/playlist
 
 ## Routing.
 
-[ List the __new routes__ supported by your app and state the associated page.]
-
-+ /blogs - displays all published blogs.
-+ /blogs/:id - displays a particular blog.
-+ /blogs/:id/comments - detail view of a particular blog and its comments.
-+ etc.
-
-[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
-
-## Independent learning (If relevant).
-
-Itemize the technologies/techniques you researched independently and adopted in your project, 
-i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 
-(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
++ /popular - displays currently popular movies
++ /now_playing - displays movies currently in the cinema
++ /credits/:id - displays the credits of a particular movie
++ /recommendations/:id - displays the recommendations of a particular movie
++ /playlist - displays saved movies added by the watchlist button
